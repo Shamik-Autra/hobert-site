@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hobert Sun's Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .dark-mode {
+            background-color: #2d3748; /* Darker background color */
+            color: #e2e8f0; /* Light text color */
+        }
+        .dark-mode a {
+            color: #90cdf4; /* Light blue link color */
+        }
+        .dark-mode .bg-white {
+            background-color: #4a5568; /* Darker card background */
+            color: #e2e8f0; /* Ensure text color is light */
+        }
+        .dark-mode .bg-blue-900 {
+            background-color: #1a202c; /* Darker header and footer background */
+        }
+        .dark-mode input,
+        .dark-mode textarea,
+        .dark-mode select,
+        .dark-mode button {
+            background-color: #4a5568; /* Darker input background */
+            color: #e2e8f0; /* Light text color */
+            border-color: #2d3748; /* Dark border */
+        }
+        .dark-mode #todo-list li {
+            background-color: #4a5568; /* Darker background for list items */
+            color: #e2e8f0; /* Light text color for list items */
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <!-- Header -->
+    <header class="bg-blue-900 text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">Hobert Sun</h1>
+            <nav>
+                <ul class="flex space-x-4">
+                    <li><a href="#bio" class="hover:underline">Biography</a></li>
+                    <li><a href="#sites" class="hover:underline">Sites I Made at AUTRA</a></li>
+                    <li><a href="#hobbies" class="hover:underline">Hobbies</a></li>
+                    <li><a href="#projects" class="hover:underline">Projects</a></li>
+                    <li><a href="#contact" class="hover:underline">Contact</a></li>
+                    <li><a href="#todo" class="hover:underline">To-Do List</a></li>
+                </ul>
+            </nav>
+            <button id="dark-mode-toggle" class="bg-gray-700 text-white p-2 rounded-lg ml-4">Dark Mode</button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto p-6">
+        <!-- Biography Section -->
+        <section id="bio" class="bg-white p-6 rounded-lg shadow-lg mb-6">
+            <h2 class="text-3xl font-bold mb-4">Biography</h2>
+            <div class="flex items-center">
+                <img src="profile.jpg" alt="Hobert Sun's Profile Picture" class="rounded-full w-32 h-32 mr-6">
+                <p class="text-lg">Hello my name is <strong>Hobert</strong>. I am <strong>16</strong> years old and in grade <strong>11</strong>. I am a fan of the Golden State Warriors and Stephen Curry. My favorite flavor is sweet. I have participated in events like the Scholar's Cup.</p>
+            </div>
+        </section>
+
+        <!-- Sites I Made at AUTRA Section -->
+        <section id="sites" class="bg-white p-6 rounded-lg shadow-lg mb-6">
+            <h2 class="text-3xl font-bold mb-4">Sites I Made at AUTRA</h2>
+            <p class="text-lg"><a href="hot and a lot.html" class="text-blue-500 hover:underline">Hot and a Lot - Restaurant Page</a></p>
+            <p class="text-lg mt-4">I also developed a game that you can play:</p>
+            <p class="text-lg"><a href="https://cvb-game.netlify.app/" target="_blank" class="text-blue-500 hover:underline">Play my game - CVB Game</a></p>
+        </section>
+
+        <!-- Hobbies Section -->
+        <section id="hobbies" class="bg-white p-6 rounded-lg shadow-lg mb-6">
+            <h2 class="text-3xl font-bold mb-4">Hobbies</h2>
+            <ul class="list-disc ml-5 text-lg">
+                <li>Basketball</li>
+                <li>Video games</li>
+                <li>Drum</li>
+                <li>Badminton</li>
+            </ul>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="bg-white p-6 rounded-lg shadow-lg mb-6">
+            <h2 class="text-3xl font-bold mb-4">Projects</h2>
+            <p class="text-lg">I enjoy working on projects like the Food festival.</p>
+        </section>
+
+        <!-- To-Do List Section -->
+        <section id="todo" class="bg-white p-6 rounded-lg shadow-lg mb-6">
+            <h2 class="text-3xl font-bold mb-4">To-Do List</h2>
+            <div class="flex mb-4">
+                <input type="text" id="todo-input" class="flex-grow p-2 border border-gray-300 rounded-l-lg" placeholder="Enter a new task">
+                <button id="add-todo" class="bg-blue-900 text-white p-2 rounded-r-lg">Add</button>
+            </div>
+            <ul id="todo-list" class="list-disc pl-5 space-y-2">
+                <!-- To-do items will appear here -->
+            </ul>
+        </section>
+
+        <!-- Contact Form -->
+        <section id="contact" class="bg-white p-6 rounded-lg shadow-lg mb-6">
+            <h2 class="text-3xl font-bold mb-4">Contact Me</h2>
+            <form action="#" method="POST" class="space-y-4">
+                <div>
+                    <label for="name" class="block text-lg font-bold">Name:</label>
+                    <input type="text" id="name" name="name" class="w-full p-2 border border-gray-300 rounded-lg">
+                </div>
+                <div>
+                    <label for="email" class="block text-lg font-bold">Email:</label>
+                    <input type="email" id="email" name="email" class="w-full p-2 border border-gray-300 rounded-lg">
+                </div>
+                <div>
+                    <label for="message" class="block text-lg font-bold">Message:</label>
+                    <textarea id="message" name="message" class="w-full p-2 border border-gray-300 rounded-lg"></textarea>
+                </div>
+                <button type="submit" class="bg-blue-900 text-white p-2 rounded-lg">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-blue-900 text-white p-4 text-center">
+        <p>&copy; 2024 Hobert Sun. All rights reserved.</p>
+    </footer>
+
+    <!-- Basic JavaScript Setup -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const toggleButton = document.getElementById('dark-mode-toggle');
+            toggleButton.addEventListener('click', () => {
+                document.body.classList.toggle('dark-mode');
+                toggleButton.textContent = document.body.classList.contains('dark-mode') ? 'Light Mode' : 'Dark Mode';
+            });
+
+            const todoInput = document.getElementById('todo-input');
+            const addTodoButton = document.getElementById('add-todo');
+            const todoList = document.getElementById('todo-list');
+
+            addTodoButton.addEventListener('click', () => {
+                const taskText = todoInput.value.trim();
+                if (taskText !== '') {
+                    const listItem = document.createElement('li');
+                    listItem.classList.add('flex', 'justify-between', 'items-center', 'bg-gray-200', 'p-2', 'rounded-lg');
+
+                    const taskSpan = document.createElement('span');
+                    taskSpan.textContent = taskText;
+                    listItem.appendChild(taskSpan);
+
+                    const removeButton = document.createElement('button');
+                    removeButton.textContent = 'Remove';
+                    removeButton.classList.add('bg-red-500', 'text-white', 'p-2', 'rounded-lg');
+                    removeButton.addEventListener('click', () => {
+                        todoList.removeChild(listItem);
+                    });
+                    listItem.appendChild(removeButton);
+
+                    todoList.appendChild(listItem);
+                    todoInput.value = '';
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
